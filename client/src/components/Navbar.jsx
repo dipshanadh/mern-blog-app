@@ -10,7 +10,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className="px-10 bg-white shadow-md fixed top-0 w-full">
+		<nav className="px-10 bg-white shadow-md fixed top-0 w-full z-50">
 			<div className="max-w-6xl mx-auto flex items-center">
 				<Link to="/" className="text-2xl font-semibold mr-auto py-5">
 					Dipshan's blog
@@ -27,7 +27,7 @@ const Navbar = () => {
 					</li>
 					<li>
 						<NavLink
-							to="/create"
+							to="/create-blog"
 							className="px-2 py-1.5 border-black hover:border-b-2"
 						>
 							Create blog
@@ -61,17 +61,17 @@ const Navbar = () => {
 
 				{/* Hamburger Icon */}
 				<button
-					className="hamburger md:hidden focus:outline-none relative w-[24px] h-[21px] transition-all  duration-300"
+					className="hamburger md:hidden focus:outline-none relative w-[24px] h-[21px]"
 					onClick={e => handleClick(e)}
 				>
-					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 hamburger-top"></span>
-					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 translate-y-[7px] hamburger-middle"></span>
-					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 translate-y-[14px] hamburger-bottom"></span>
+					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 transition-all duration-300 hamburger-top"></span>
+					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 translate-y-[7px] transition-all duration-300 hamburger-middle"></span>
+					<span className="bg-black w-[24px] h-[2px] absolute top-0 left-0 translate-y-[14px] transition-all duration-300 hamburger-bottom"></span>
 				</button>
 
 				{/* Mobile Menu */}
 				<ul
-					className="absolute left-6 right-6 bg-white top-[78px] hidden md:hidden flex flex-col shadow-md gap-8 p-8 items-center text-lg font-medium"
+					className="absolute left-6 right-6 bg-white top-[100px] hidden md:hidden flex flex-col rounded-md shadow-md gap-8 p-8 items-center text-lg font-medium"
 					ref={menuRef}
 				>
 					<li>
@@ -80,6 +80,14 @@ const Navbar = () => {
 							className="px-2 py-1.5 border-black hover:border-b-2"
 						>
 							Blogs
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to="/create-blog"
+							className="px-2 py-1.5 border-black hover:border-b-2"
+						>
+							Create blog
 						</NavLink>
 					</li>
 					<li>

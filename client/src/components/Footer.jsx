@@ -6,7 +6,7 @@ const Footer = () => (
 					<img
 						src="https://avatars.githubusercontent.com/u/76583762"
 						alt="dipshan adhikari"
-						className="w-10 h-10 rounded-full"
+						className="w-10 h-10 rounded-full hidden sm:block"
 					/>
 					<span className="mx-3 text-xl">Dipshan's blog</span>
 				</a>

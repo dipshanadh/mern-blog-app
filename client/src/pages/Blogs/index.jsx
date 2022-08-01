@@ -10,7 +10,7 @@ const Blogs = () => {
 		<>
 			<Navbar />
 			<main className="mt-[71px] p-10 bg-gray-100">
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<h1 className="text-3xl font-semibold text-center mb-[1.5ch]">
 						Blogs
 					</h1>

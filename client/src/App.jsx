@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 // Blog pages
 import Blogs from "./pages/Blogs"
 import Blog from "./pages/Blogs/Blog"
+import CreateBlog from "./pages/Blogs/CreateBlog"
 
 // Auth pages
 import Login from "./pages/Auth/Login"
@@ -14,7 +15,6 @@ import Register from "./pages/Auth/Register"
 import ForgotPassword from "./pages/Auth/ForgotPassword"
 
 import AboutMe from "./pages/AboutMe"
-import CreateBlog from "./pages/CreateBlog"
 
 const App = () => {
 	return (
@@ -35,7 +35,7 @@ const App = () => {
 							element={<ForgotPassword />}
 						/>
 					</Route>
-					<Route path="create" element={<CreateBlog />} />
+					<Route path="create-blog" element={<CreateBlog />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

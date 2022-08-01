@@ -9,7 +9,7 @@ const CTA = () => (
 				</h1>
 				<Link
 					to="/auth/register"
-					className="text-white bg-[#303030] py-2 px-8 flex items-center gap-2 rounded-full text-lg mt-8 md:mt-0 focus:ring focus:ring-gray-400"
+					className="text-white bg-[#303030] py-2 px-8 flex items-center gap-2 rounded-full text-lg mt-8 md:mt-0 focus:ring focus:ring-gray-400 w-fit"
 				>
 					Register now{" "}
 					<svg

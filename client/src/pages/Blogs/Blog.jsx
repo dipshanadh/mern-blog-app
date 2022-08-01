@@ -50,7 +50,7 @@ const Blog = () => {
 								</span>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									className="h-6 w-6 inline ml-[1ch] mr-[0.5ch]"
+									className="h-6 w-6 inline ml-[1ch] mr-[0.7ch]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"

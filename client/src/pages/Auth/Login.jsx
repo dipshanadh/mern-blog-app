@@ -6,7 +6,7 @@ const Login = () => {
 
 	return (
 		<main className="grid md:grid-cols-2 min-h-screen">
-			<div className="p-16 my-auto">
+			<div className="px-8 sm:px-16 py-16 my-auto">
 				<p className="text-center">
 					Don't have an account?{" "}
 					<Link

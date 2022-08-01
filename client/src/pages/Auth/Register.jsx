@@ -14,7 +14,7 @@ const Register = () => {
 				/>
 			</div>
 
-			<div className="p-16 my-auto">
+			<div className="px-8 sm:px-16 py-16 my-auto">
 				<p className="text-center">
 					Already have an account?{" "}
 					<Link

@@ -13,7 +13,7 @@ const ForgotPassword = () => {
 				/>
 			</div>
 
-			<div className="p-16 my-auto">
+			<div className="px-8 sm:px-16 py-16 my-auto">
 				<h1 className="text-3xl font-semibold text-center">
 					Reset password
 				</h1>
