@@ -26,9 +26,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignoring server for now
-server
-
 # config.env
 server/config/config.env
 
