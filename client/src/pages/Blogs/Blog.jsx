@@ -1,23 +1,95 @@
 // Compoennts
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
-
-import { useEffect, useRef, useState } from "react"
-import Markdown from "marked-react"
-
-import rawMarkdown from "../../markdown"
+import BlogContent from "./BlogContent"
 
 const Blog = () => {
-	document.title = "About me | Dipshan's blog"
+	const blog = {
+		title: "Welcome to Dipshan's amazing blog | Dipshan's blog",
+		author: "Dipshan Adhikari",
+		content: `
+Hello guys, this is a simple blog web app made which supports markdown. 
+This blog is made using
+React.js in the frontend and Node, Express, and
+MongoDB in the backend (MERN stack). I have used
+tailwindCSS. I am not a big fan of UI libraries like
+Bootstrap or Material UI. I prefer to use
+TailwindCSS, because I have much more control over
+the styling. TailwindCSS makes it easy and quick to
+style your website.
 
-	const [readingTime, setReadingTime] = useState(0)
-	const blogRef = useRef()
+This is writtend in markdown, but is parsed to HTML.
+In this blog, I am going to give a little demo of this blog application.
 
-	useEffect(() => {
-		setReadingTime(
-			Math.ceil(blogRef.current.textContent.split(" ").length / 250)
-		)
-	}, [])
+# Heading level 1 
+## Heading level 2	
+### Heading level 3	
+#### Heading level 4	
+##### Heading level 5	
+
+**This is a bold text**
+
+This is ~~not~~ a strikethrough.
+
+*This is an italicized text*
+
+This text is ***bold with italic***.
+
+### Lists
+1. First item
+2. Second item
+3. Third item
+    - Indented item
+    - Indented item
+4. Fourth item
+
+### Blockquote
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed wood.
+
+### Horizontal rule
+---
+
+### Link
+[This is a link](https://www.dipshanadhikari.com.np)
+
+### Table
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+### Code
+    <html>
+        <body>
+            <h1>Hello world !
+        </body>
+    </html>
+
+    h1 {
+        color: red;
+    }
+
+    document.querySelector("h1").textContent = "Hello dear"
+
+
+### Image
+![Dipshan Adhikari](https://avatars.githubusercontent.com/u/76583762)
+
+
+### Dipshan Adhikari
+- [Facebook](https://facebook.com/dipshanadh)
+- [Github](https://github.com/dipshanadh)
+- [Instagram](https://instagram.com/dipshanadh)
+- [Twitter](https://twitter.com/dipshanadh)
+- [Linkedin](https://linkedin.com/dipshanadh)
+`,
+	}
+
+	const readingTime = Math.ceil(blog.content.split(" ").length / 250)
+
+	document.title = blog.title
 
 	return (
 		<>
@@ -25,7 +97,7 @@ const Blog = () => {
 			<main className="mt-[71px] p-10 bg-gray-100">
 				<div className="max-w-3xl mx-auto">
 					<header>
-						<h1 className="text-3xl md:text-4xl text-center sm:text-left">
+						<h1 className="text-3xl font-semibold md:text-4xl text-center sm:text-left">
 							Welcome to Dipshan's amazing blog
 						</h1>
 
@@ -67,12 +139,7 @@ const Blog = () => {
 						</div>
 					</header>
 
-					<section
-						className="text-lg text-justify space-y-[2ch] mt-[2ch] prose md:prose-lg lg:prose-xl max-w-none mx-auto"
-						ref={blogRef}
-					>
-						<Markdown>{rawMarkdown}</Markdown>
-					</section>
+					<BlogContent content={blog.content} />
 				</div>
 			</main>
 			<Footer />
