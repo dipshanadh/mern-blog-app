@@ -8,7 +8,7 @@
 		"dev": "nodemon server"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Dipshan Adhikari",
 	"license": "ISC",
 	"dependencies": {
 		"@sendgrid/mail": "^7.7.0",
